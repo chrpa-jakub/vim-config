@@ -5,3 +5,5 @@ endif
 
 map <F2> :NERDTreeToggle <CR>
 map <C-[> :cc <CR> 
+map <PageDown> <Nop>
+map <PageUp> <Nop>
