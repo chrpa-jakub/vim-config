@@ -1,5 +1,6 @@
 if &filetype == 'c' || &filetype == 'cpp'
-  map <F5> :w <CR> :!g++ % -o compiled.out -ansi -pedantic -std=c++11 && ./compiled.out <CR>
+  map <F5> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++17 && ./%<.out <CR>
+  map <F6> :w <CR> :! g++ % -g -fsanitize=address -o debug_%<.out -std=c++17 -ansi -pedantic && ./debug_%<.out <CR>
 endif
 
 
