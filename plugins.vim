@@ -16,6 +16,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'preservim/nerdcommenter'
+Plug 'nvim-treesitter/nvim-treesitter' 
+Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
-
-
