@@ -9,6 +9,8 @@ map § $
 map ů 0
 map ú [m
 map ) ]m 
+map <A-ú> {
+map <A-)> }
 map <C-[> :cc <CR> 
 map <PageDown> <Nop>
 map <PageUp> <Nop>
