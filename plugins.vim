@@ -18,4 +18,5 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-treesitter/nvim-treesitter' 
 Plug 'p00f/nvim-ts-rainbow'
+Plug 'turbio/bracey.vim'
 call plug#end()
