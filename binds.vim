@@ -18,3 +18,4 @@ map <A-)> }
 map <C-[> :cc <CR> 
 map <PageDown> <Nop>
 map <PageUp> <Nop>
+map <F1> <Nop>
