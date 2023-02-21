@@ -29,10 +29,32 @@
 :endfun
 :command CPPFile :call CPPFile()
 
+:fun! HtmlFile()
+:read !echo '<\!DOCTYPE html>'
+:read !echo '<html lang="en">' 
+:read !echo '<head>'
+:read !echo '	<meta charset="UTF-8">'
+:read !echo '	<title>Title</title>'
+:read !echo '</head>'
+:read !echo '<body>'
+:read !echo '	'
+:read !echo '</body>'
+:read !echo '</html>'
+:exe 1
+:d1
+:exe 8 
+:call feedkeys('A', 'n')
+:endfun
+:command HtmlFile :call HtmlFile()
+
 if &filetype == 'cpp'
   :command Def :call CPPFile()
 endif
 
 if &filetype == 'c'
   :command Def :call CFile()
+endif
+
+if &filetype == 'html'
+  :command Def :call HtmlFile()
 endif
