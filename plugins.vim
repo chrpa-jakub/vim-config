@@ -19,4 +19,5 @@ Plug 'preservim/nerdcommenter'
 Plug 'nvim-treesitter/nvim-treesitter' 
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'turbio/bracey.vim'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()

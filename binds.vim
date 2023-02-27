@@ -1,6 +1,6 @@
 if &filetype == 'c' || &filetype == 'cpp'
-  map <F5> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++17 && ./%<.out <CR>
-  map <F6> :w <CR> :! g++ % -g -fsanitize=address -o debug_%<.out -std=c++17 -ansi -pedantic && ./debug_%<.out <CR>
+  map <F5> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++20 -Wall && ./%<.out <CR>
+  map <F6> :w <CR> :! g++ % -std=c++20 -g -fsanitize=address -o debug_%<.out -ansi -pedantic -Wall && ./debug_%<.out <CR>
 endif
 
 if &filetype == 'html' || &filetype == 'css'
@@ -19,3 +19,6 @@ map <C-[> :cc <CR>
 map <PageDown> <Nop>
 map <PageUp> <Nop>
 map <F1> <Nop>
+
+au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
