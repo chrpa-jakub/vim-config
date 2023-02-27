@@ -20,5 +20,5 @@ map <PageDown> <Nop>
 map <PageUp> <Nop>
 map <F1> <Nop>
 
-au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+au VimEnter * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
