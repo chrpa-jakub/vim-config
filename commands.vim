@@ -46,6 +46,8 @@
 :call feedkeys('A', 'n')
 :endfun
 :command HtmlFile :call HtmlFile()
+:command W :w
+
 
 if &filetype == 'cpp'
   :command Def :call CPPFile()

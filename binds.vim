@@ -3,7 +3,7 @@ if &filetype == 'c' || &filetype == 'cpp'
   map <F6> :w <CR> :! g++ % -std=c++20 -g -fsanitize=address -o debug_%<.out -ansi -pedantic -Wall && ./debug_%<.out <CR>
 endif
 
-if &filetype == 'html' || &filetype == 'css'
+if &filetype == 'html' || &filetype == 'css' || &filetype == 'php'
   map <F5> :w <CR> :Bracey <CR>
 endif
 
