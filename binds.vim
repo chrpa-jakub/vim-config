@@ -1,6 +1,6 @@
 if &filetype == 'c' || &filetype == 'cpp'
   map <F5> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++20 -Wall && ./%<.out <CR>
-  map <F6> :w <CR> :! g++ % -std=c++20 -g -fsanitize=address -o debug_%<.out -ansi -pedantic -Wall && ./debug_%<.out <CR>
+  map <F6> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++20 -Wall  -g -fsanitize=address && ./%<.out <CR>
 endif
 
 if &filetype == 'html' || &filetype == 'css' || &filetype == 'php'
