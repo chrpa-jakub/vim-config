@@ -16,9 +16,12 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'preservim/nerdcommenter'
-Plug 'nvim-treesitter/nvim-treesitter' 
-Plug 'p00f/nvim-ts-rainbow'
+" Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'p00f/nvim-ts-rainbow'
 Plug 'turbio/bracey.vim'
-Plug 'OmniSharp/omnisharp-vim'
+" Plug 'OmniSharp/omnisharp-vim'
 Plug 'dense-analysis/ale'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+
 call plug#end()

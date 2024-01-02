@@ -48,9 +48,29 @@
 :command HtmlFile :call HtmlFile()
 :command W :w
 
+:fun! GoFile()
+:read !echo 'package main'
+:read !echo ''
+:read !echo 'import "fmt"'
+:read !echo ''
+:read !echo 'func main() {'
+:read !echo '	'
+:read !echo '}'
+:exe 1
+:d1
+:exe 6
+:call feedkeys('A', 'n') 
+:endfun
+:command GoFile :call GoFile()
+
+
 
 if &filetype == 'cpp'
   :command Def :call CPPFile()
+endif
+
+if &filetype == 'go'
+  :command Def :call GoFile()
 endif
 
 if &filetype == 'c'

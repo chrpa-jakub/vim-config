@@ -1,10 +1,22 @@
 if &filetype == 'c' || &filetype == 'cpp'
   map <F5> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++20 -Wall && ./%<.out <CR>
-  map <F6> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++20 -Wall  -g -fsanitize=address && ./%<.out <CR>
+  map <F6> :w <CR> :! g++ % -o %<.out -ansi -pedantic -std=c++20 -Wall  -g -fsanitize=address && ./%<.out -fpermissive <CR>
+endif
+
+if &filetype == 'rust'
+  map <F5> :w <CR> :!cargo build <CR> :!cargo run <CR>
 endif
 
 if &filetype == 'html' || &filetype == 'css' || &filetype == 'php'
-  map <F5> :w <CR> :Bracey <CR>
+  map <F5> :w <CR> :!vivaldi %<CR>
+endif
+
+if &filetype == 'svelte'
+    map <F5> :w <CR> :!npm run dev&<CR> :!vivaldi http://localhost:5173<CR> 
+endif
+
+if &filetype == 'go'
+    map <F5> :w <CR> :!go run .<CR>
 endif
 
 map <F3> :let oldline = line(".") <CR> gg=G <CR> :exe oldline <CR> <C-l>
@@ -18,6 +30,7 @@ map <A-)> }
 map <C-[> :cc <CR> 
 map <PageDown> <Nop>
 map <PageUp> <Nop>
+let mapleader=","
 map <F1> <Nop>
 
 au VimEnter * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

@@ -1,7 +1,9 @@
 {
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
+  "clangd.path": "/usr/lib/llvm/16/bin/clangd",
+  "clangd.fallbackFlags": [ "-std=c++17" ],
   "coc.source.OmniSharp.enable" : true,
-  "coc.source.OmniSharp.triggerCharacters": "."
+  "coc.source.OmniSharp.triggerCharacters": ".",
+  "svelte.enable-ts-plugin": true
 }
 
 
