@@ -4,7 +4,7 @@ if &filetype == 'c' || &filetype == 'cpp'
 endif
 
 if &filetype == 'rust'
-  map <F5> :w <CR> :!cargo build <CR> :!cargo run <CR>
+  map <F5> :w <CR> :!cargo run <CR>
 endif
 
 if &filetype == 'html' || &filetype == 'css' || &filetype == 'php'
@@ -16,7 +16,7 @@ if &filetype == 'svelte'
 endif
 
 if &filetype == 'go'
-    map <F5> :w <CR> :!go run .<CR>
+    map <F5> :w <CR> :!go build .<CR> :!go run .<CR>
 endif
 
 map <F3> :let oldline = line(".") <CR> gg=G <CR> :exe oldline <CR> <C-l>
@@ -31,6 +31,7 @@ map <C-[> :cc <CR>
 map <PageDown> <Nop>
 map <PageUp> <Nop>
 let mapleader=","
+inoremap <leader>p "1p 
 map <F1> <Nop>
 
 au VimEnter * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

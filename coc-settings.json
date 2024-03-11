@@ -3,7 +3,10 @@
   "clangd.fallbackFlags": [ "-std=c++17" ],
   "coc.source.OmniSharp.enable" : true,
   "coc.source.OmniSharp.triggerCharacters": ".",
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "diagnostic.virtualText": true,
+  "go.checkForUpdates": true,
+  "go.goplsPath": "/home/diahex/go/bin/gopls"
 }
 
 

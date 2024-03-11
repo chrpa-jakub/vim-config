@@ -30,3 +30,4 @@ set termguicolors
 
 filetype on
 filetype detect
+silent! loadview
