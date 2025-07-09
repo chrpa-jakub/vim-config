@@ -14,6 +14,7 @@ Plug 'joshdick/onedark.vim'
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'preservim/nerdcommenter'
 " Plug 'nvim-treesitter/nvim-treesitter'
@@ -24,5 +25,7 @@ Plug 'dense-analysis/ale'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+Plug 'buoto/gotests-vim'
+Plug 'https://github.com/wolandark/vim-live-server.git'
 
 call plug#end()

@@ -7,8 +7,8 @@ if &filetype == 'rust'
   map <F5> :w <CR> :!cargo run <CR>
 endif
 
-if &filetype == 'html' || &filetype == 'css' || &filetype == 'php'
-  map <F5> :w <CR> :!vivaldi %<CR>
+if &filetype == 'html' || &filetype == 'css' 
+  map <F5> :w <CR> :StartBrowserSync <CR> :!vivaldi localhost:3000 --parent-window<CR>
 endif
 
 if &filetype == 'svelte'
@@ -34,5 +34,15 @@ let mapleader=","
 inoremap <leader>p "1p 
 map <F1> <Nop>
 
+nnoremap <C-c> <C-a>
+
 au VimEnter * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+nnoremap <leader>p "1p
+nnoremap p "+p
+nnoremap P "+P
+nnoremap y "+y
+nnoremap Y "+Y
+nnoremap d "+d
+nnoremap D "+D
