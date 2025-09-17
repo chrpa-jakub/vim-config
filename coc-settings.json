@@ -6,7 +6,7 @@
   "svelte.enable-ts-plugin": true,
   "diagnostic.virtualText": true,
   "go.checkForUpdates": true,
-  "go.goplsPath": "/home/diahex/go/bin/gopls"
+  "go.goplsPath": "/usr/bin/gopls"
 }
 
 
