@@ -16,7 +16,7 @@ if &filetype == 'svelte'
 endif
 
 if &filetype == 'go'
-    map <F5> :w <CR> :!go build .<CR> :!go run .<CR>
+    map <F5> :w <CR> :!go run .<CR>
 endif
 
 map <F3> :let oldline = line(".") <CR> gg=G <CR> :exe oldline <CR> <C-l>
@@ -39,10 +39,4 @@ nnoremap <C-c> <C-a>
 au VimEnter * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * :silent ! xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
-nnoremap <leader>p "1p
-nnoremap p "+p
-nnoremap P "+P
-nnoremap y "+y
-nnoremap Y "+Y
-nnoremap d "+d
-nnoremap D "+D
+nnoremap <leader>p "2p

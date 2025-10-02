@@ -31,3 +31,22 @@ set termguicolors
 filetype on
 filetype detect
 silent! loadview
+
+augroup ClipboardAndRegisters
+  autocmd!
+  autocmd TextYankPost * call SyncRegisters(v:event)
+augroup END
+
+function! SyncRegisters(event)
+  let text = getreg('+')
+  if empty(text)
+    return
+  endif
+
+  if a:event.operator ==# 'y' || a:event.operator =~# 'd\|c'
+    for i in reverse(range(1, 9))
+      call setreg(string(i), getreg(i-1))
+    endfor
+  endif
+endfunction
+
