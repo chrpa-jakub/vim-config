@@ -28,4 +28,8 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCM
 Plug 'buoto/gotests-vim'
 Plug 'https://github.com/wolandark/vim-live-server.git'
 
+Plug 'mfussenegger/nvim-dap'
+Plug 'leoluz/nvim-dap-go'
+Plug 'igorlfs/nvim-dap-view'
+
 call plug#end()

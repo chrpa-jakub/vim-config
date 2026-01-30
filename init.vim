@@ -10,7 +10,11 @@ source ~/.config/nvim/rainbow-colors.vim
 source ~/.config/nvim/commands.vim
 source ~/.config/nvim/telescope_settings.vim
 source ~/.config/nvim/docx_config.vim
+source ~/.config/nvim/dap_config.vim
 " source ~/.config/nvim/omnisharp-config.vim
+"
+lua require('dap-go').setup()
+lua require('dap')
 let g:gotests_template_dir = '/home/diahex/gotests-templates/templates'
 
 " Disable zip plugin

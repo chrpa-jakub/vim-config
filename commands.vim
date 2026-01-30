@@ -80,3 +80,33 @@ endif
 if &filetype == 'html'
   :command Def :call HtmlFile()
 endif
+
+function! s:GetGoModuleName() abort
+  if &filetype !=# 'go'
+    return ''
+  endif
+
+  let l:gomod = findfile('go.mod', expand('%:p:h') . ';')
+  if empty(l:gomod)
+    return ''
+  endif
+
+  for l:line in readfile(l:gomod)
+    if l:line =~# '^module\s\+'
+      return substitute(l:line, '^module\s\+', '', '')
+    endif
+  endfor
+
+  return ''
+endfunction
+
+function! s:InsertGoModule() abort
+  let l:mod = s:GetGoModuleName()
+  if empty(l:mod)
+    return
+  endif
+
+  execute 'normal! i' . l:mod 
+endfunction
+
+command! Pkg call s:InsertGoModule()
