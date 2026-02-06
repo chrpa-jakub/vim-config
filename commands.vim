@@ -114,12 +114,12 @@ command! Pkg call s:InsertGoModule()
 function! ExportInterface()
     write
     let l:struct = expand('<cword>')
-    let l:iface_name = substitute(l:struct, '^\l', '\u&', '')
-    let l:pkg = substitute(getline(search('^package ')), 'package ', '', '')
+    let l:iface_name = l:struct
+    let l:pkg = substitute(getline(search('^package ', 'n')), 'package ', '', '')
     let l:cmd = 'ifacemaker -f ' . expand('%') . ' -s ' . l:struct . ' -i ' . l:iface_name . ' -p ' . l:pkg . ' | sed -n "/^type /,\$p"'
     let l:output = system(l:cmd)
     let @+ = trim(l:output)
     echo "Copied " . l:iface_name . " to clipboard"
 endfunction
 
-nnoremap <leader>gi :call ExportInterface()<CR>
+nnoremap <leader>i :call ExportInterface()<CR>
