@@ -6,7 +6,18 @@
   "svelte.enable-ts-plugin": true,
   "diagnostic.virtualText": true,
   "go.checkForUpdates": true,
-  "go.goplsPath": "/usr/bin/gopls"
+  "go.goplsPath": "/usr/bin/gopls",
+  "go.tags.transform": "camelcase",
+  "gopls": {
+    "ui.completion.usePlaceholders": true,
+    "formatting.gofumpt": true,
+    "ui.codelenses": {
+      "generate": true,
+      "gc_details": true,
+      "test": true,
+      "tidy": true
+    },
+  }
 }
 
 
