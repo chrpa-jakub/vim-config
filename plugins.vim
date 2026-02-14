@@ -4,7 +4,7 @@ Plug 'windwp/nvim-autopairs'
 
 Plug 'itchyny/lightline.vim'
 
-Plug 'preservim/nerdtree'
+Plug 'stevearc/oil.nvim'
 Plug 'ryanoasis/vim-devicons' 
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

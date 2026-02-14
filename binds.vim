@@ -20,7 +20,7 @@ if &filetype == 'go'
 endif
 
 map <F3> :let oldline = line(".") <CR> gg=G <CR> :exe oldline <CR> <C-l>
-map <F2> :NERDTreeToggle <CR>
+nnoremap <expr> <F2> (&ft == 'oil' ? '<CMD>bd!<CR>' : '<CMD>Oil<CR>')
 map § $
 map ů 0
 map ú [m

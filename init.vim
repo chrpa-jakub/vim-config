@@ -14,6 +14,7 @@ source ~/.config/nvim/commands.vim
 " source ~/.config/nvim/omnisharp-config.vim
 "
 lua require('dap-go').setup()
+lua require('oil').setup()
 lua require('dap')
 let g:gotests_template_dir = '/home/diahex/gotests-templates/templates'
 
