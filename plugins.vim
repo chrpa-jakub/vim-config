@@ -18,10 +18,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'preservim/nerdcommenter'
 " Plug 'nvim-treesitter/nvim-treesitter'
-" Plug 'p00f/nvim-ts-rainbow'
 Plug 'turbio/bracey.vim'
-" Plug 'OmniSharp/omnisharp-vim'
-Plug 'dense-analysis/ale'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }

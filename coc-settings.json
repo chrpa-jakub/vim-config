@@ -1,23 +1,6 @@
 {
   "clangd.path": "/usr/lib/llvm/16/bin/clangd",
-  "clangd.fallbackFlags": [ "-std=c++17" ],
-  "coc.source.OmniSharp.enable" : true,
-  "coc.source.OmniSharp.triggerCharacters": ".",
+  "clangd.fallbackFlags": ["-std=c++17"],
   "svelte.enable-ts-plugin": true,
-  "diagnostic.virtualText": true,
-  "go.checkForUpdates": true,
-  "go.goplsPath": "/usr/bin/gopls",
-  "go.tags.transform": "camelcase",
-  "gopls": {
-    "ui.completion.usePlaceholders": true,
-    "formatting.gofumpt": true,
-    "ui.codelenses": {
-      "generate": true,
-      "gc_details": true,
-      "test": true,
-      "tidy": true
-    },
-  }
+  "diagnostic.virtualText": true
 }
-
-
